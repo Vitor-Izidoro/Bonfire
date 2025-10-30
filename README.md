@@ -48,4 +48,4 @@ Coloque um arquivo MP3 de som de fogueira em `public/assets/audio/bonfire-ambien
 
 ---
 
-Feito com ❤️ para momentos de pausa ao redor da fogueira.
+Feito para momentos de pausa ao redor da fogueira.
