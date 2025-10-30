@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bonfire – Relatos ao redor da fogueira</title>
+  <meta name="description" content="Escreva como foi seu dia e leia relatos de outras pessoas ao redor da fogueira." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <canvas id="campfire-canvas" aria-hidden="true"></canvas>
+  <div id="overlay">
+    <header class="header">
+      <h1>Bonfire</h1>
+      <div class="audio-controls">
+        <button id="audio-toggle" title="Tocar/Pausar som da fogueira">Tocar ambiente</button>
+        <input id="audio-volume" type="range" min="0" max="1" step="0.01" value="0.5" title="Volume" />
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="composer">
+        <h2>Como foi seu dia?</h2>
+        <form id="post-form">
+          <textarea id="post-text" placeholder="Compartilhe seu relato..." rows="4" maxlength="1000"></textarea>
+          <div class="form-row">
+            <span class="hint">Até 1000 caracteres</span>
+            <button type="submit" class="primary">Enviar</button>
+          </div>
+          <p id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="feed">
+        <h2>Ao redor da fogueira</h2>
+        <ul id="posts" class="posts"></ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Um lugar simples para respirar, ouvir o crepitar do fogo e compartilhar.</p>
+    </footer>
+  </div>
+
+  <audio id="bg-audio" loop preload="none">
+    <source src="/assets/audio/bonfire-ambience.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="/campfire.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
